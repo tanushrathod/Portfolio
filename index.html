@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tanush S. Rathod | Full-Stack Developer</title>
     <meta name="description" content="Portfolio of Tanush Sanjay Rathod, a B.Sc. Computer Science student and Full-Stack Developer.">
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://googleapis.com" />
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
     <script>
         tailwind.config = {
             theme: {
@@ -30,94 +34,109 @@
 </head>
 <body class="antialiased selection:bg-primary selection:text-white">
 
-<nav class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-gray-900/70 border-b border-white/10 py-3 transition-all duration-300">
-    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
-        
-        <!-- Left Side: Logo -->
-        <a href="#" class="flex items-center">
-            <img src="assets/images/logos.png" alt="Logo" class="w-[230px] h-auto object-contain rounded-tl-[30px] rounded-br-[30px] shadow-md border border-white/5">
-        </a>
-
-        <!-- Right Side: Navigation & Profile Actions -->
-        <div class="flex items-center space-x-8">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-gray-900/70 border-b border-white/10 py-3 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
             
-            <!-- Links (Hidden on Mobile, Flex on Desktop) -->
-            <div class="hidden md:flex space-x-6 text-sm font-medium text-gray-300">
-                <a href="#about" class="hover:text-blue-400 transition-colors duration-200 relative py-2 group">
-                    About
-                    <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="#skills" class="hover:text-blue-400 transition-colors duration-200 relative py-2 group">
-                    Skills
-                    <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="#projects" class="hover:text-blue-400 transition-colors duration-200 relative py-2 group">
-                    Projects
-                    <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="#education" class="hover:text-blue-400 transition-colors duration-200 relative py-2 group">
-                    Education
-                    <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="#contact" class="hover:text-blue-400 transition-colors duration-200 relative py-2 group">
-                    Contact
-                    <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+            <!-- Left Side: Logo -->
+            <a href="#" class="flex items-center">
+                <img src="assets/images/logos.png" alt="Logo" class="w-[230px] h-auto object-contain rounded-tl-[30px] rounded-br-[30px] shadow-md border border-white/5">
+            </a>
+
+            <!-- Right Side: Navigation & Profile Actions -->
+            <div class="flex items-center space-x-8">
+                
+                <!-- Links (Hidden on Mobile, Flex on Desktop) -->
+                <div class="hidden md:flex space-x-6 text-sm font-medium text-gray-300">
+                    <a href="#about" class="hover:text-blue-400 transition-colors duration-200 relative py-2 group">
+                        About
+                        <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#skills" class="hover:text-blue-400 transition-colors duration-200 relative py-2 group">
+                        Skills
+                        <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#projects" class="hover:text-blue-400 transition-colors duration-200 relative py-2 group">
+                        Projects
+                        <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#education" class="hover:text-blue-400 transition-colors duration-200 relative py-2 group">
+                        Education
+                        <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#contact" class="hover:text-blue-400 transition-colors duration-200 relative py-2 group">
+                        Contact
+                        <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </div>
+
+                <!-- Action Buttons Group -->
+                <div class="flex items-center space-x-4">
+                    <!-- Hire Me Button -->
+                    <a href="#contact" class="hidden md:block px-5 py-2.5 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white rounded-full transition-all duration-300 transform hover:scale-105 font-semibold text-sm shadow-lg shadow-blue-500/20">
+                        Hire Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Interactive Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden bg-darker cursor-crosshair" style="margin-top: 30px;">
+        
+        <!-- The 3D Canvas Background -->
+        <canvas id="tubes-canvas" class="absolute inset-0 w-full h-full block z-0" style="touch-action: none;"></canvas>
+        
+        <!-- Content Overlay -->
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10 pointer-events-none">
+            
+            <div class="flex items-center justify-center space-x-8 mb-6 pointer-events-auto">
+                <img src="assets/images/Tanush_Profile_Photo.png" alt="profile-pic" class="w-32 h-32 object-cover rounded-full border-2 border-blue-500/40 shadow-lg hover:border-blue-400 transition-colors duration-300">
+            </div>
+            
+            <p class="text-primary font-semibold tracking-wide uppercase mb-3 drop-shadow-md">Hello, I'm</p>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 drop-shadow-[0_0_20px_rgba(0,0,0,0.8)] select-none">Tanush S. Rathod</h1>
+            <h2 class="text-2xl md:text-4xl text-gray-200 font-light mb-8 drop-shadow-md select-none">
+                I build <span class="text-white font-semibold typing-effect" id="typed-text"></span>
+            </h2>
+            <p class="text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed text-lg drop-shadow-md select-none">
+                A highly motivated full-stack developer eager to engineer efficient, scalable web applications and explore data-driven solutions.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4 pointer-events-auto">
+                <a href="#projects" class="px-8 py-3 bg-primary hover:bg-blue-600 text-white rounded-full font-semibold transition shadow-lg border border-transparent hover:border-blue-400">View My Work</a>
+                <a href="assets/TANUSH_RESUME.pdf" download class="px-8 py-3 glass-card hover:bg-gray-800 text-white rounded-full font-semibold transition flex items-center justify-center gap-2 shadow-lg hover:border-gray-500">
+                    <i class="fa-solid fa-download"></i> Download Resume
                 </a>
             </div>
 
-            <!-- Action Buttons Group -->
-            <div class="flex items-center space-x-4">
-                <!-- Hire Me Button -->
-                <a href="#contact" class="hidden md:block px-5 py-2.5 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white rounded-full transition-all duration-300 transform hover:scale-105 font-semibold text-sm shadow-lg shadow-blue-500/20">
-                    Hire Me
-                </a>
-                
-                
-                
-
-        </div>
-    </div>
-</nav>
-
-    <section class="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-darker to-darker -z-10"></div>
-       
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <div class="flex items-center space-x-8"style="display: flex; justify-content: center; align-items: center;">
-                <img src="assets/images/Tanush_Profile_Photo.jpg" alt="profile-pic" class="w-30 h-20 object-cover rounded-full border-2 border-blue-500/40 shadow-md hover:border-blue-400 transition-colors duration-300">
-        </div>
-            
-            <p class="text-primary font-semibold tracking-wide uppercase mb-3">Hello, I'm</p>
-            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6">Tanush S. Rathod</h1>
-            <h2 class="text-2xl md:text-4xl text-gray-400 font-light mb-8">
-                I build <span class="text-white font-semibold typing-effect" id="typed-text"></span>
-            </h2>
-            <p class="text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed text-lg">
-                A highly motivated full-stack developer eager to engineer efficient, scalable web applications and explore data-driven solutions.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#projects" class="px-8 py-3 bg-primary hover:bg-blue-600 text-white rounded-full font-semibold transition">View My Work</a>
-                <a href="assets/TANUSH_RESUME.pdf" download class="px-8 py-3 glass-card hover:bg-gray-800 text-white rounded-full font-semibold transition flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-download"></i> Download Resume
-                </a>
+            <!-- Interaction Indicator -->
+            <div class="mt-12 flex flex-col items-center gap-2 text-white/50 animate-pulse select-none">
+                <i class="fa-solid fa-arrow-pointer"></i>
+                <span class="text-xs uppercase tracking-widest">Move cursor & click anywhere</span>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="py-20 bg-dark">
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-dark relative z-10">
         <div class="max-w-6xl mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Technical <span class="text-primary">Arsenal</span></h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
                 <div class="glass-card p-6 rounded-2xl hover-lift">
-                    <i class="fa-brands fa-html5 text-4xl text-orange-500 mb-4"></i>                       <i class="fa-brands fa-php text-4xl text-indigo-400 mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-3">Frontend And Backends</h3>
+                    <div class="flex gap-4 mb-4">
+                        <i class="fa-brands fa-html5 text-4xl text-orange-500"></i>                       
+                        <i class="fa-brands fa-php text-4xl text-indigo-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Frontend & Backend</h3>
                     <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">HTML5</span>
                         <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">CSS3</span>
                         <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">JavaScript</span>
-                         <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">PHP</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">PHP</span>
                         <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">MySQL</span>
-                        <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">Mongo DB</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">MongoDB</span>
                         <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">Java</span>
                         <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">C / C++</span>
                     </div>
@@ -133,6 +152,7 @@
                         <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">Matplotlib</span>
                     </div>
                 </div>
+                
                 <div class="glass-card p-6 rounded-2xl hover-lift">
                     <i class="fa-brands fa-linux text-4xl text-blue-200 mb-4"></i>
                     <h3 class="text-xl font-semibold mb-3">Tools & OS</h3>
@@ -140,33 +160,34 @@
                         <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">VS Code</span>
                         <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">Linux(Kali/Ubuntu)</span>
                         <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">Git/GitHub</span>
-  
                     </div>
                 </div>
+                
                 <div class="glass-card p-6 rounded-2xl hover-lift">
                     <i class="fa-solid fa-gear text-4xl text-gray-300 mb-4"></i>
-
                     <h3 class="text-xl font-semibold mb-3">Practical Skills</h3>
                     <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">Hardware Setup</span>
-                        <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">Video/Images Editing</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">Video/Image Editing</span>
                         <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">Server DB Handling</span>
-                        <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">Graphical Templates Designing</span>
-                        <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">digital Product Designing</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">Graphical Templates</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded-full text-sm">Digital Products</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="py-20">
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 relative z-10">
         <div class="max-w-6xl mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Featured <span class="text-primary">Projects</span></h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
                 <div class="glass-card rounded-2xl overflow-hidden hover-lift flex flex-col">
-                    <div class="h-48 bg-gray-800 flex items-center justify-center text-gray-500">
-                     <img src="assets/images/p2.PNG" style="background: #ccc url('bg-image.jpg') center/cover no-repeat; width: 540px; height: 200px;"> </div>
+                    <div class="h-48 bg-gray-800 flex items-center justify-center text-gray-500 overflow-hidden">
+                        <img src="assets/images/p2.PNG" alt="Business Analysis System" class="w-full h-full object-cover"> 
+                    </div>
                     <div class="p-6 flex-1 flex flex-col">
                         <h3 class="text-2xl font-bold mb-2">Business Analysis System</h3>
                         <p class="text-gray-400 mb-4 text-sm flex-1">A robust full-stack web platform designed for managing and analyzing complex business data securely.</p>
@@ -175,29 +196,27 @@
                             <span class="text-xs text-primary bg-blue-900/30 px-2 py-1 rounded">MySQL</span>
                             <span class="text-xs text-primary bg-blue-900/30 px-2 py-1 rounded">JavaScript</span>
                         </div>
-            
                     </div>
                 </div>
 
                 <div class="glass-card rounded-2xl overflow-hidden hover-lift flex flex-col">
-                    <div class="h-48 bg-gray-800 flex items-center justify-center text-gray-500">
-                        <img src="assets/images/p4.PNG" style="background: #ccc url('bg-image.jpg') /cover no-repeat; width: 540px; height: 200px;"> 
+                    <div class="h-48 bg-gray-800 flex items-center justify-center text-gray-500 overflow-hidden">
+                        <img src="assets/images/p4.PNG" alt="Tech Portal" class="w-full h-full object-cover"> 
                     </div>
                     <div class="p-6 flex-1 flex flex-col">
                         <h3 class="text-2xl font-bold mb-2">Tanush's Tech Portal</h3>
-                        <p class="text-gray-400 mb-4 text-sm flex-1">Employee attendance tracking system with specialized secure dashboards for HR with Finance,Payrolling managment system,Deals and daily expense managment system and Web Development departments to streamline operations.In tech companys and orgnisations.</p>
+                        <p class="text-gray-400 mb-4 text-sm flex-1">Employee attendance tracking system with specialized secure dashboards for HR, Payroll, Deals, and Daily Expense management.</p>
                         <div class="flex gap-2 mb-4">
                             <span class="text-xs text-primary bg-blue-900/30 px-2 py-1 rounded">PHP</span>
                             <span class="text-xs text-primary bg-blue-900/30 px-2 py-1 rounded">MySQL</span>
                             <span class="text-xs text-primary bg-blue-900/30 px-2 py-1 rounded">CSS3</span>
                         </div>
-                        
                     </div>
                 </div>
 
                 <div class="glass-card rounded-2xl overflow-hidden hover-lift flex flex-col">
-                    <div class="h-48 bg-gray-800 flex items-center justify-center text-gray-500">
-                        <img src="assets/images/p1.PNG" style="background: #ccc url('bg-image.jpg') center/cover no-repeat; width: 540px; height: 200px;"> 
+                    <div class="h-48 bg-gray-800 flex items-center justify-center text-gray-500 overflow-hidden">
+                        <img src="assets/images/p1.PNG" alt="Speed Test" class="w-full h-full object-cover"> 
                     </div>
                     <div class="p-6 flex-1 flex flex-col">
                         <h3 class="text-2xl font-bold mb-2">Interactive Speed Test</h3>
@@ -206,13 +225,12 @@
                             <span class="text-xs text-primary bg-blue-900/30 px-2 py-1 rounded">JavaScript</span>
                             <span class="text-xs text-primary bg-blue-900/30 px-2 py-1 rounded">HTML5</span>
                         </div>
-                        
                     </div>
                 </div>
 
                 <div class="glass-card rounded-2xl overflow-hidden hover-lift flex flex-col">
-                    <div class="h-48 bg-gray-800 flex items-center justify-center text-gray-500">
-                        <img src="assets/images/p3.PNG" style="background: #ccc url('bg-image.jpg') center/cover no-repeat; width: 540px; height: 200px;">
+                    <div class="h-48 bg-gray-800 flex items-center justify-center text-gray-500 overflow-hidden">
+                        <img src="assets/images/p3.PNG" alt="ARA Platform" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6 flex-1 flex flex-col">
                         <h3 class="text-2xl font-bold mb-2">All Resources Available (ARA)</h3>
@@ -221,7 +239,6 @@
                             <span class="text-xs text-primary bg-blue-900/30 px-2 py-1 rounded">Full Stack</span>
                             <span class="text-xs text-primary bg-blue-900/30 px-2 py-1 rounded">UI/UX</span>
                         </div>
-                        
                     </div>
                 </div>
 
@@ -229,7 +246,8 @@
         </div>
     </section>
 
-    <section id="education" class="py-20 bg-dark">
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-dark relative z-10">
         <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12">
             
             <div>
@@ -272,26 +290,28 @@
         </div>
     </section>
 
-    <section id="contact" class="py-20 relative">
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 relative z-10">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Let's Build Something <span class="text-primary">Great</span></h2>
             <p class="text-gray-400 mb-10">I am currently looking for internship opportunities and freelance projects. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
             
             <div class="flex justify-center gap-6 mb-12">
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tanushsrathod@gmail.com" class="h-14 w-14 rounded-full glass-card flex items-center justify-center text-xl hover:text-primary hover-lift transition"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tanushsrathod@gmail.com" target="_blank" class="h-14 w-14 rounded-full glass-card flex items-center justify-center text-xl hover:text-primary hover-lift transition"><i class="fa-solid fa-envelope"></i></a>
                 <a href="https://linkedin.com/in/tanush-s-rathod" target="_blank" class="h-14 w-14 rounded-full glass-card flex items-center justify-center text-xl hover:text-primary hover-lift transition"><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="https://github.com/tanushrathod" target="_blank" class="h-14 w-14 rounded-full glass-card flex items-center justify-center text-xl hover:text-primary hover-lift transition"><i class="fa-brands fa-github"></i></a>
                 <a href="tel:+918007174229" class="h-14 w-14 rounded-full glass-card flex items-center justify-center text-xl hover:text-primary hover-lift transition"><i class="fa-solid fa-phone"></i></a>
             </div>
 
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tanushsrathod@gmail.com" class="px-8 py-4 bg-primary hover:bg-blue-600 text-white rounded-full font-bold text-lg transition shadow-[0_0_20px_rgba(59,130,246,0.4)]">Say Hello</a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tanushsrathod@gmail.com" target="_blank" class="px-8 py-4 bg-primary hover:bg-blue-600 text-white rounded-full font-bold text-lg transition shadow-[0_0_20px_rgba(59,130,246,0.4)]">Say Hello</a>
         </div>
     </section>
 
-    <footer class="py-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+    <footer class="py-8 border-t border-gray-800 text-center text-gray-500 text-sm relative z-10">
         <p>&copy; 2026 Tanush Sanjay Rathod. Built with precision.</p>
     </footer>
 
+    <!-- Scripts -->
     <script>
         // Typing Effect Logic
         const textArray = ["Dynamic Web Apps.", "Secure Backends.", "Data Solutions.", "Modern UIs."];
@@ -326,6 +346,51 @@
         
         document.addEventListener("DOMContentLoaded", function() {
             setTimeout(type, 1000);
+        });
+    </script>
+
+    <!-- 3D Interactive Background Script -->
+    <script type="module">
+        // Helper function to generate random hex colors
+        const randomColors = (count) => {
+            return new Array(count)
+                .fill(0)
+                .map(() => "#" + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0'));
+        };
+
+        const canvas = document.getElementById('tubes-canvas');
+        const heroSection = document.getElementById('hero');
+        let tubesApp = null;
+
+        // Dynamically import the ThreeJS tubes module
+        import('https://cdn.jsdelivr.net/npm/threejs-components@0.0.19/build/cursors/tubes1.min.js')
+            .then(module => {
+                const TubesCursor = module.default;
+                
+                // Initialize with colors matching your portfolio's blue theme
+                tubesApp = TubesCursor(canvas, {
+                    tubes: {
+                        colors: [" #3b82f6", " #60a5fa", " #93c5fd"], 
+                        lights: {
+                            intensity: 200,
+                            colors: ["#1d4ed8", "#2563eb", "#3b82f6", "#60a5fa"]
+                        }
+                    }
+                });
+            })
+            .catch(err => console.error("Failed to load TubesCursor:", err));
+
+        // Handle Click Interaction on the Hero Section
+        heroSection.addEventListener('click', (e) => {
+            // Prevent color change if the user is clicking a button, link, or image
+            if (e.target.closest('a') || e.target.closest('img')) return;
+            
+            if (tubesApp) {
+                const colors = randomColors(3);
+                const lightsColors = randomColors(4);
+                tubesApp.tubes.setColors(colors);
+                tubesApp.tubes.setLightsColors(lightsColors);
+            }
         });
     </script>
 </body>
